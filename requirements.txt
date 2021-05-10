@@ -3,3 +3,4 @@ streamlit
 wordcloud
 numpy
 matplotlib
+plotly
