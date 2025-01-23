@@ -68,6 +68,6 @@ if not st.sidebar.checkbox("Hide",True,key='3'):
     plt.imshow(wordcloud)
     plt.xticks([])
     plt.yticks([])
-    st.set_option('deprecation.showPyplotGlobalUse',False) # This is needed to avoid raising a warning for calling pyplot with no arguments
+    #st.set_option('deprecation.showPyplotGlobalUse',False) # This is needed to avoid raising a warning for calling pyplot with no arguments. Not allowed as argument in version 1.41
     st.pyplot()
 
