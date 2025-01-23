@@ -11,7 +11,7 @@ st.sidebar.title('US airline sentiment')
 st.subheader("This is a dashboard made with Streamlit to analyze sentiment about airlines in Twitter")
 st.sidebar.subheader("This is a dashboard made with 'Streamlit' to analyze sentiment about airlines in Twitter")
 
-@st.cache(persist=True)
+@st.cache_data(persist=True)
 def load_data():
     data = pd.read_csv('Tweets.csv')
     data ['tweet_created'] = pd.to_datetime(data['tweet_created'])
@@ -42,7 +42,7 @@ if not st.sidebar.checkbox('Hide',True):
 st.sidebar.subheader("When and where are users tweeting from?")
 hour = st.sidebar.slider("Hour of day", 0, 23)
 modified_data = data[data['tweet_created'].dt.hour == hour]
-if not st.sidebar.checkbox("Hide",True,key='1'):
+if not st.sidebar.checkbox("Hide",True,key='2'):
     st.markdown('## Tweet locations by time of day')
     st.markdown('%i tweets between %i:00 and %i:00' % (len(modified_data), hour, (hour+1)%24))
     st.map(modified_data)

@@ -4,3 +4,4 @@ wordcloud
 numpy
 matplotlib
 plotly
+Pillow==11.0
